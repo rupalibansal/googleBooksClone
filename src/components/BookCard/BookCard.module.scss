@@ -1,0 +1,96 @@
+// .BookCard {
+//   width: 200px;
+//   height: 150px;
+//   padding: 20px;
+//   margin: 20px;
+//   background-color: rgb(147, 147, 229);
+// }
+
+// .book-card {
+//   display: flex;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   overflow: hidden;
+//   margin-bottom: 20px;
+//   background-color: #fff;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
+
+.bookImage {
+  padding-top: 10px;
+  width: 128px;
+  height: 196px;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: relative;
+  height: 350px;
+  width: 300px;
+  padding: 0 20px 0 20px;
+  background: radial-gradient(
+    rgba(185, 24, 24, 0),
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05)
+  );
+  // border: 3px solid white;
+  // background-color: rgb(241, 239, 239);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.2s;
+  overflow: hidden;
+  margin: 20px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+.contentContainer {
+  background-color: #e0e0e0;
+  margin-top: 30px; /* Adjust margin top */
+  margin-bottom: 10px;
+}
+.contentContainer h4,
+h3 {
+  margin: 2px;
+}
+
+.contentContainer p {
+  margin-top: 0; /* Adjust margin top for p */
+  margin-bottom: 0; /* Adjust margin bottom for p */
+}
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffd814;
+  border-color: #fcd200;
+  color: rgb(0, 0, 0); /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 1; /* Ensure button appears on top of the image */
+}
+
+.imageContainer:hover .button {
+  opacity: 1; /* Show button on hover */
+  transform: translate(-50%, -50%) scale(1.1); /* Scale button slightly on hover */
+}

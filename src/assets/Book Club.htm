@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./Book Club_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Club</title>
+  <style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/App.css">#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/container/Layout/Layout.module.scss">._flex_15j0c_1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  padding: 2em;
+}</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/components/SearchForm/SearchForm.module.scss">._InputBoxStyleLandingPage_zcpha_1 {
+  width: 45rem;
+  height: 29px;
+  font-size: 17px;
+}
+
+._InputBoxStyleBooksPage_zcpha_7 {
+  width: 50%;
+  height: 29px;
+  font-size: 17px;
+}
+
+._ImageStyle_zcpha_13 {
+  width: 20px;
+  height: 20px;
+}
+
+._formBody_zcpha_18 {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+}</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/components/BookCard/BookCard.module.scss">._bookImage_ykhw3_1 {
+  padding-top: 10px;
+  width: 128px;
+  height: 196px;
+  overflow: hidden;
+}
+
+._backdrop_ykhw3_8 {
+  position: relative;
+  height: 350px;
+  width: 300px;
+  padding: 0 20px 0 20px;
+  background: radial-gradient(rgba(185, 24, 24, 0), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.2s;
+  overflow: hidden;
+  margin: 20px;
+}
+._backdrop_ykhw3_8::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+}
+._backdrop_ykhw3_8:hover {
+  transform: scale(1.05);
+}
+._backdrop_ykhw3_8:hover::after {
+  opacity: 0.3;
+}
+
+._contentContainer_ykhw3_37 {
+  background-color: rgb(224, 224, 224);
+  margin-top: 2; /* Adjust margin top */
+  margin-bottom: 10px;
+}
+
+._contentContainer_ykhw3_37 h4 {
+  margin-bottom: 3px; /* Adjust margin bottom for h4 */
+}
+
+._contentContainer_ykhw3_37 p {
+  margin-top: 0; /* Adjust margin top for p */
+  margin-bottom: 0; /* Adjust margin bottom for p */
+}
+
+._button_ykhw3_52 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #6cdf01; /* Button background color */
+  color: rgb(255, 255, 255); /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 1; /* Ensure button appears on top of the image */
+}
+
+._imageContainer_ykhw3_67:hover ._button_ykhw3_52 {
+  opacity: 1; /* Show button on hover */
+  transform: translate(-50%, -50%) scale(1.1); /* Scale button slightly on hover */
+}</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/components/Modal/Modal.module.scss">._overlay_1soak_1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+._modalContainer_1soak_16 {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+._modalRight_1soak_28 {
+  width: 100%;
+}
+
+._closeBtn_1soak_32 {
+  position: fixed;
+  cursor: pointer;
+  top: -4px;
+  right: 18px;
+  color: black;
+}
+
+._content_1soak_40 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  color: black;
+}
+
+._modalContainer_1soak_16 img {
+  max-width: 100%;
+  height: 70%;
+  border-radius: 8px;
+}</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/pages/BooksPage/BooksPage.module.scss">._BooksPage_129ih_1 {
+  min-width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/pages/LandingPage/LandingPage.module.scss">._googleContainer_1j51c_1 {
+  position: relative;
+  display: inline-block; /* Ensure container only takes necessary space */
+}
+
+._googleContainer_1j51c_1 img {
+  display: block; /* Ensures image is block-level for better positioning */
+}
+
+._googleContainer_1j51c_1 span {
+  position: absolute;
+  bottom: -5px; /* Adjust this value as needed to align perfectly */
+  left: 80%; /* Positions the span relative to its containing block */
+  transform: translateX(-50%); /* Centers the span horizontally */
+  /* Ensures visibility against the image */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}</style><style type="text/css" data-vite-dev-id="/Users/bansalz/nology/Projects/googleBooks/src/index.css">:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="_flex_15j0c_1"><main><div><form class="_formBody_zcpha_18"><input class="_InputBoxStyleBooksPage_zcpha_7" type="text" placeholder="Search books..." value=""><button type="submit" style="width: 20px; height: 29px;"><img class="_ImageStyle_zcpha_13" src="./Book Club_files/magnifying-glass.svg"></button></form></div><div><label>Results per page:</label><select><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option></select></div><div><h1>Books</h1><main class="_BooksPage_129ih_1"><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content" alt="Dad, How Do I?"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$27.49</h5><h4>Dad, How Do I?</h4><p><strong>Author:</strong> Rob Kenney</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(1)" alt="Why a Daughter Needs a Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$9.89</h5><h4>Why a Daughter Needs a Dad</h4><p><strong>Author:</strong> Gregory E. Lang, Susanna Leonard Hill</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(2)" alt="The Good Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$11.99</h5><h4>The Good Dad</h4><p><strong>Author:</strong> Jim Daly</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(3)" alt="Dad, I Wrote a Book about You"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>Dad, I Wrote a Book about You</h4><p><strong>Author:</strong> M. H. Clark</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(4)" alt="The Life of Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$12.99</h5><h4>The Life of Dad</h4><p><strong>Author:</strong> Anna Machin</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(5)" alt="He&#39;s My Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>He's My Dad</h4><p><strong>Author:</strong> Leanne White</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(6)" alt="How to DAD"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$14.54</h5><h4>How to DAD</h4><p><strong>Author:</strong> Jordan Watson</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(7)" alt="The Expectant Dad&#39;s Survival Guide"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>The Expectant Dad's Survival Guide</h4><p><strong>Author:</strong> Rob Kemp</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(8)" alt="My Dad Is Fantastic"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>My Dad Is Fantastic</h4><p><strong>Author:</strong> Roald Dahl</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(9)" alt="Because of You, Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>Because of You, Dad</h4><p><strong>Author:</strong> Kobi Yamada</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(10)" alt="The Ultimate Stay-at-Home Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$21.24</h5><h4>The Ultimate Stay-at-Home Dad</h4><p><strong>Author:</strong> Shannon Carpenter</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(11)" alt="So You&#39;re Going to Be a Dad, revised edition"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>So You're Going to Be a Dad, revised edition</h4><p><strong>Author:</strong> Peter Downey</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(12)" alt="Dad by My Side"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$9.99</h5><h4>Dad by My Side</h4><p><strong>Author:</strong> Soosh</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(13)" alt="Mum &amp; Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$9.99</h5><h4>Mum &amp; Dad</h4><p><strong>Author:</strong> Joanna Trollope</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(14)" alt="My Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>My Dad</h4><p><strong>Author:</strong> Anthony Browne</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(15)" alt="Why a Son Needs a Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>Why a Son Needs a Dad</h4><p><strong>Author:</strong> Unknown Author</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(16)" alt="The New Father"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>The New Father</h4><p><strong>Author:</strong> Armin A. Brott</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(17)" alt="Dear Dad"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>$12.99</h5><h4>Dear Dad</h4><p><strong>Author:</strong> Samuel Johnson</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(18)" alt="Dad, Tell Me"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>Dad, Tell Me</h4><p><strong>Author:</strong> Elma van Vliet</p></div></article></div><div><article class="_backdrop_ykhw3_8"><div class="_imageContainer_ykhw3_67"><img class="_bookImage_ykhw3_1" src="./Book Club_files/content(19)" alt="The True Meaning Of ?Dad?"><button class="_button_ykhw3_52">Quick look</button></div><div class="_contentContainer_ykhw3_37"><h5>Out of Stock</h5><h4>The True Meaning Of ?Dad?</h4><p><strong>Author:</strong> J. N. Cisse</p></div></article></div></main></div><div><div>Showing 1 to 20</div><div><button disabled="">1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button>10</button></div></div></main></div></div>
+    <script type="module" src="./Book Club_files/main.jsx"></script>
+  
+
+</body></html>
