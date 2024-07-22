@@ -1,21 +1,3 @@
-// .BookCard {
-//   width: 200px;
-//   height: 150px;
-//   padding: 20px;
-//   margin: 20px;
-//   background-color: rgb(147, 147, 229);
-// }
-
-// .book-card {
-//   display: flex;
-//   border: 1px solid #ccc;
-//   border-radius: 8px;
-//   overflow: hidden;
-//   margin-bottom: 20px;
-//   background-color: #fff;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-// }
-
 .bookImage {
   padding-top: 10px;
   width: 128px;
@@ -74,13 +56,13 @@ h3 {
   transform: translate(-50%, -50%);
   background: #ffd814;
   border-color: #fcd200;
-  color: rgb(0, 0, 0); /* Button text color */
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-  z-index: 1; /* Ensure button appears on top of the image */
+  z-index: 1;
 }
 
 .imageContainer {
@@ -89,6 +71,6 @@ h3 {
 }
 
 .imageContainer:hover .button {
-  opacity: 1; /* Show button on hover */
-  transform: translate(-50%, -50%) scale(1.1); /* Scale button slightly on hover */
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
 }
