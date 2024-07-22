@@ -49,7 +49,7 @@ const BookCard = ({ book }) => {
         <div className={styles.contentContainer}>
           <h3>{price}</h3>
           <h4>{title}</h4>
-          <p>Author: {authorList}</p>
+          <p style={{ "font-size": "small" }}>Author: {authorList}</p>
         </div>
       </article>
     </div>
